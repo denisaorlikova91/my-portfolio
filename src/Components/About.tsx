@@ -66,6 +66,13 @@ const About: React.FC<AboutProps> = () => {
                     justifyContent={'center'}
                     gap={4}
                     p={2}
+                    sx={{
+                        display: {
+                            xs: 'none', // hide on mobile
+                            sm: 'none', // show on tablet and larger screens
+                            md: 'flex',
+                        },
+                    }}
                     >
                         <img src='cyborg.jpeg' alt="Denisa Orlikova" width='100%' height='auto' />
                     </Box>
