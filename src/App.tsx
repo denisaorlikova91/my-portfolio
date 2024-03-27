@@ -6,6 +6,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Projects from './Components/Projects';
 import CssBaseline from '@mui/material/CssBaseline/CssBaseline';
+import Blog from './Components/Blog';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
           </Routes>
           <Footer />
         </div>

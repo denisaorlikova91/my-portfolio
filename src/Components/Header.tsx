@@ -8,6 +8,7 @@ const Header: React.FC<HeaderProps> = () => {
     { label: 'About', to: '/' },
     { label: 'Projects', to: '/projects' },
     { label: 'Contact', to: '/contact' },
+    { label: 'Blog', to: '/blog' },
   ];
 
   return (

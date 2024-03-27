@@ -8,7 +8,7 @@ interface NavProps {
 
 const Nav: React.FC<NavProps> = ({ navLinks }) => {
   return (
-      <AppBar>
+      <AppBar color='transparent' position='fixed'>
             <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-evenly' }} >
                 {navLinks.map((link, index) => ( 
                     <Button key={index} color="inherit" component={Link} to={link.to}>{link.label}</Button>
