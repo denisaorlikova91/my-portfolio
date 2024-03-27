@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Container, Box, Typography, Button, Card, CardActions, CardContent, CardMedia, Grid, Stack } from '@mui/material';
+import { Container, Box, Typography, Button, Card, CardActions, CardContent, CardMedia, Grid, Stack, Link } from '@mui/material';
 
 interface BlogProps {
     type_of: string;
@@ -36,47 +36,25 @@ const Blog: React.FC = () => {
     }, []);
   
     return (
-        <React.Fragment>
-        <Container>
-            <Box
-                height={'100vh'}
-                width={'100%'}
-                gap={4}
-                p={2}
-                sx={{ border: '1px dashed hotpink'}}
-                >
-             
-             <Typography align='center' variant="h1" component="h1" gutterBottom mt={8}>My Articles</Typography>
-                {isLoading && <p>Loading articles...</p>}
-                {error && <p className="error">{error}</p>}
-                <Grid container spacing={2}>
-                    {articles.map((article) => (
-                            <Grid item xs={12} sm={6} md={4} key={article.id}>
-                               <Card sx={{ maxWidth: 345 }}>
-                                        <CardMedia
-                                            component="img"
-                                            alt="article cover image"
-                                            height="180"
-                                            image={article.cover_image ?? undefined}
-                                        />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            {article.title}
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            {article.description}
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions >
-                                        <Button size="small">Read on Dev.to</Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                    ))}
-                </Grid>
-            </Box>
-        </Container>
-  </React.Fragment>
+      <React.Fragment>
+      <Container>
+          <Box
+              height={'100vh'}
+              width={'100%'}
+              flexDirection={'column'}
+              display="flex"
+              justifyContent={'center'}
+              gap={4}
+              p={2}
+              >
+           
+           <Typography variant="h2" component="h2" gutterBottom>Blog</Typography>
+           <Typography variant="body1" gutterBottom>
+              This section is still under construction. You can check out my blog posts at <Link href="https://dev.to/orlikova" target="_blank" rel="noopener noreferrer">Dev.to</Link>.
+          </Typography>
+          </Box>
+      </Container>
+</React.Fragment>
     );
   };
   

@@ -10,16 +10,17 @@ const Projects: React.FC<ProjectsProps> = () => {
             <Box
                 height={'100vh'}
                 width={'100%'}
+                flexDirection={'column'}
                 display="flex"
                 justifyContent={'center'}
-                alignItems="center"
                 gap={4}
                 p={2}
-                sx={{ border: '1px dashed hotpink'}}
                 >
              
-             <Typography variant="h1" component="h1" gutterBottom>Projects</Typography>
-
+             <Typography variant="h2" component="h2" gutterBottom>Projects</Typography>
+             <Typography variant="body1" gutterBottom>
+                This section is still under construction. Please check back later.
+            </Typography>
             </Box>
         </Container>
   </React.Fragment>

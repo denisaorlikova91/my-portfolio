@@ -11,46 +11,18 @@ const Contact: React.FC = () => {
         <Box
             height={'100vh'}
             width={'100%'}
+            flexDirection={'column'}
             display="flex"
             justifyContent={'center'}
-            alignItems="center"
             gap={4}
             p={2}
-            sx={{ border: '1px dashed hotpink'}}
             >
-         
-         <section className="contact-page">
-      <Typography variant="h4" gutterBottom>
+               <Typography variant="h2" component='h2' gutterBottom>
         Let's Connect
       </Typography>
       <Typography variant="body1" gutterBottom>
-        The best way to reach me is through email or on my social platforms.
+        The best way to reach me is through my email <Link href="mailto:d.orlikova@outlook.com">d.orlikova@outlook.com</Link>
       </Typography>
-
-      <Box sx={{ mt: 3 }}> {/* Adds spacing */}
-        <List>
-          <ListItem>
-            <ListItemIcon>
-              <EmailIcon />
-            </ListItemIcon>
-            <ListItemText>
-              <Link href="mailto:d.orlikova@outlook.com">d.orlikova@outlook.com</Link>
-            </ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <LinkedInIcon />
-            </ListItemIcon>
-            <ListItemText>
-              <Link href="https://www.linkedin.com/in/denisaorlikova91" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </Link>
-            </ListItemText>
-          </ListItem>
-        </List>
-      </Box>
-    </section>
-
         </Box>
     </Container>
 </React.Fragment>
