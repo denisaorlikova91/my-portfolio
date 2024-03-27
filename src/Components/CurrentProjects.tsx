@@ -1,6 +1,5 @@
 import { Container, Box, Typography } from '@mui/material';
 import React, {  } from 'react';
-import TechStack from './TechStack';
 
 interface CurrentProjectsProps {} 
 
@@ -23,7 +22,6 @@ const CurrentProjects: React.FC<CurrentProjectsProps> = () => {
                         This section is still under construction. Please check back later.
                     </Typography>
                 </Box>
-                <TechStack />
             </Container>
         </React.Fragment>
     );

@@ -6,11 +6,12 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import WorkTimelineItem from './WorkTimelineItem';
+import { Grid } from '@mui/material';
 
 export default function WorkTimeline() {
   return (
     <React.Fragment>
-          
+        <Grid container spacing={2} md={5}>
           <Timeline position="alternate">
             <TimelineItem>
               <TimelineSeparator>
@@ -18,12 +19,12 @@ export default function WorkTimeline() {
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>Eat</TimelineContent>
-            </TimelineItem>
-        <WorkTimelineItem />
-        <WorkTimelineItem />
-        <WorkTimelineItem />
+              </TimelineItem>
+              <WorkTimelineItem />
+              <WorkTimelineItem />
+              <WorkTimelineItem />
           </Timeline>
-
+      </Grid>
     </React.Fragment>
   );
 }

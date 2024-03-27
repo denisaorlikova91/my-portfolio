@@ -5,6 +5,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedIn from '@mui/icons-material/LinkedIn';
 import LogoDevIcon from '@mui/icons-material/LogoDev';
 import useFadeIn from '../hooks/useFadeIn';
+import TechStackGrid from './TechStackGrid';
+import WorkTimeline from './WorkTimeline/WorkTimeline';
 
 interface HomeProps {} 
 
@@ -71,7 +73,11 @@ const Home: React.FC<HomeProps> = () => {
                             <img src='cyborg.jpeg' alt="Denisa Orlikova" width='100%' height='auto' />
                         </Box>
                 </Box>
-            </Fade>
+                </Fade>
+                <Box display='flex' justifyContent='space-between' p={2}>
+                    <WorkTimeline />
+                    <TechStackGrid />
+                </Box>
         </Container>
   </React.Fragment>
     );
