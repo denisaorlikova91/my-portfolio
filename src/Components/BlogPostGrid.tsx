@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Container, Box, Typography, Button, Card, CardActions, CardContent, CardMedia, Grid, Stack } from '@mui/material';
+import { Container, Box, Typography, Button, Card, CardActions, CardContent, CardMedia, Grid } from '@mui/material';
+import Masonry from '@mui/lab/Masonry';
 
 interface BlogProps {
     type_of: string;
@@ -46,31 +47,29 @@ const BlogPostGrid: React.FC = () => {
              <Typography align='center' variant="h2" component="h2" gutterBottom mt={8}>My Articles</Typography>
                 {isLoading && <p>Loading articles...</p>}
                 {error && <p className="error">{error}</p>}
-                <Grid container spacing={2}>
+                <Masonry columns={4} spacing={2}>
                     {articles.map((article) => (
-                            <Grid item xs={12} sm={6} md={4} key={article.id}>
-                               <Card sx={{ maxWidth: 345 }}>
-                                        <CardMedia
-                                            component="img"
-                                            alt="article cover image"
-                                            height="180"
-                                            image={article.cover_image ?? undefined}
-                                        />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h6" component="h3">
-                                            {article.title}
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            {article.description}
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions >
-                                        <Button size="small">Read on Dev.to</Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                    ))}
-                </Grid>
+                        <Card key={article.id}>
+                            <CardMedia
+                                component="img"
+                                alt="article cover image"
+                                height="180"
+                                image={article.cover_image ?? undefined}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="h3">
+                                    {article.title}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    {article.description}
+                                </Typography>
+                            </CardContent>
+                            <CardActions >
+                                <Button size="small">Read on Dev.to</Button>
+                            </CardActions>
+                        </Card>
+                    ))} 
+                </Masonry>
             </Box>
         </Container>
   </React.Fragment>
