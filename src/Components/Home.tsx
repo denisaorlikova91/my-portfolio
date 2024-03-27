@@ -1,27 +1,27 @@
-import { Container, Box, Typography, Link, Stack } from '@mui/material';
+import { Container, Box, Typography, Link, Stack, Grid } from '@mui/material';
 import React from 'react';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedIn from '@mui/icons-material/LinkedIn';
 import LogoDevIcon from '@mui/icons-material/LogoDev';
+import Timeline from './WorkTimeline/WorkTimeline';
 
-interface AboutProps {} 
+interface HomeProps {} 
 
 /**
- * Represents the About component.
+ * Represents the Home component.
  * 
  * @component
  * @example
  * ```tsx
- * <About />
+ * <Home />
  * ```
  */
-const About: React.FC<AboutProps> = () => {
+const Home: React.FC<HomeProps> = () => {
     return (
         <React.Fragment>
-        <Container>
+            <Container>
             <Box
-                height={'100vh'}
                 width={'100%'}
                 display="flex"
                 justifyContent={'center'}
@@ -76,10 +76,10 @@ const About: React.FC<AboutProps> = () => {
                     >
                         <img src='cyborg.jpeg' alt="Denisa Orlikova" width='100%' height='auto' />
                     </Box>
-            </Box>
+                </Box>
         </Container>
   </React.Fragment>
     );
 };
 
-export default About;
+export default Home;

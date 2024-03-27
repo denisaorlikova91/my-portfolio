@@ -2,11 +2,12 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import About from './Components/About';
+import Home from './Components/Home';
 import Contact from './Components/Contact';
-import Projects from './Components/Projects';
 import CssBaseline from '@mui/material/CssBaseline/CssBaseline';
 import Blog from './Components/Blog';
+import CurrentProjects from './Components/CurrentProjects';
+import WorkExperience from './Components/WorkExperience';
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <div className="container"> 
           <Header />
           <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/currentprojects" element={<CurrentProjects />} />
+            <Route path="/workexperience" element={<WorkExperience />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
           </Routes>

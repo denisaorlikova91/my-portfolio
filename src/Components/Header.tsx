@@ -5,8 +5,9 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   const navLinks = [
-    { label: 'About', to: '/' },
-    { label: 'Projects', to: '/projects' },
+    { label: 'Home', to: '/' },
+    { label: 'Work Experience', to: '/workexperience' },
+    { label: 'Current Projects', to: '/currentprojects' },
     { label: 'Contact', to: '/contact' },
     { label: 'Blog', to: '/blog' },
   ];
